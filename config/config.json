@@ -1,0 +1,29 @@
+{
+  "data_sources": {
+    "seedrs": {
+      "enabled": true,
+      "base_url": "https://www.seedrs.com",
+      "rate_limit": 1.0,
+      "timeout": 30
+    },
+    "fca": {
+      "enabled": true,
+      "base_url": "https://register.fca.org.uk",
+      "rate_limit": 0.5,
+      "timeout": 45
+    }
+  },
+  "scoring": {
+    "weights": {
+      "data_quality": 0.4,
+      "metadata_quality": 0.35,
+      "reliability": 0.25
+    },
+    "grade_thresholds": {
+      "A": 90,
+      "B": 80,
+      "C": 70,
+      "D": 60
+    }
+  }
+}

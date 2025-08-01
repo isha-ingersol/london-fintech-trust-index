@@ -1,0 +1,69 @@
+[global]
+# Streamlit global configuration settings
+
+# Development mode settings
+developmentMode = false
+showWarningOnDirectExecution = false
+
+# Data collection and caching settings
+dataFrameSerialization = "arrow"
+
+[server]
+# Server configuration for deployment
+port = 8501
+enableCORS = false
+enableXsrfProtection = true
+
+# File upload settings
+maxUploadSize = 200
+maxMessageSize = 200
+
+# Security settings
+enableWebsocketCompression = false
+
+[browser]
+# Browser-specific settings
+gatherUsageStats = false
+showErrorDetails = false
+
+[theme]
+# Custom theme for fintech professional look
+primaryColor = "#1f77b4"  # Professional blue
+backgroundColor = "#ffffff"  # Clean white background
+secondaryBackgroundColor = "#f0f2f6"  # Light gray for panels
+textColor = "#262730"  # Dark text for readability
+
+# Font settings
+font = "sans serif"  # Clean, professional font
+
+[logger]
+# Logging configuration
+level = "info"
+messageFormat = "%(asctime)s %(name)s %(levelname)s: %(message)s"
+
+[client]
+# Client-side settings
+caching = true
+displayEnabled = true
+showErrorDetails = false
+
+[runner]
+# Application runner settings
+magicEnabled = true
+installTracer = false
+fixMatplotlib = true
+postScriptGC = true
+
+# Fast rerun for development
+fastReruns = true
+enforceSerializableSessionState = false
+
+[mapbox]
+# Mapbox token for geographic visualizations (if needed)
+# token = "your_mapbox_token_here"
+
+[deprecation]
+# Handle deprecation warnings
+showfileUploaderEncoding = false
+showImageFormat = false
+showPyplotGlobalUse = false

@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  fintech-trust-index:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount data directories for persistence
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    restart: unless-stopped
+    
+    # Optional: Add monitoring
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fintech-trust.rule=Host(`trust-index.yourdomain.com`)"
+      - "traefik.http.services.fintech-trust.loadbalancer.server.port=8501"
+
+  # Optional: Add scheduled data updates
+  data-updater:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+    command: python src/main_pipeline.py
+    profiles:
+      - cron
+    restart: "no"

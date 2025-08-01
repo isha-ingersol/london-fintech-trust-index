@@ -1,0 +1,115 @@
+name: Update Fintech Trust Index Data
+
+# Trigger the workflow daily at 6 AM UTC and on manual dispatch
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC
+  workflow_dispatch:  # Allow manual triggering
+  push:
+    branches: [ main ]
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Checkout the repository code
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    # Set up Python environment with required version
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    # Cache pip dependencies for faster builds
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    # Install Python dependencies from requirements.txt
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    # Create necessary directories for outputs and logs
+    - name: Create output directories
+      run: |
+        mkdir -p outputs
+        mkdir -p logs
+        mkdir -p data
+    
+    # Run the main data collection and processing pipeline
+    - name: Run Trust Index Pipeline
+      run: |
+        python src/main_pipeline.py
+      env:
+        # Add any required environment variables here
+        PYTHONPATH: ${{ github.workspace }}
+    
+    # Upload pipeline logs as artifacts for debugging
+    - name: Upload logs
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: pipeline-logs
+        path: logs/
+        retention-days: 7
+    
+    # Commit and push updated data files back to repository
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add outputs/ data/
+        git diff --staged --quiet || git commit -m "Automated data update - $(date)"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    # Notify on failure (optional - requires Slack webhook setup)
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "Pipeline failed - check logs for details"
+        # Add Slack/email notification logic here if needed
+
+  # Optional: Deploy to GitHub Pages
+  deploy-pages:
+    needs: update-data
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    # Generate static HTML reports for GitHub Pages
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    # Generate static HTML dashboard (optional)
+    - name: Generate static reports
+      run: |
+        python scripts/generate_static_reports.py
+    
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
