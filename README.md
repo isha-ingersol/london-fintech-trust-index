@@ -87,27 +87,31 @@ Access the live dashboard: [London Fintech Trust Index](https://your-app-url.str
 The system automatically collects data from configured sources:
 
 #Run complete data pipeline
-python src/main_pipeline.py
+   ```bash
+   python src/main_pipeline.py
 
 #Run specific scrapers
-python -m src.scrapers.seedrs_scraper
-python -m src.scrapers.fca_scraper
+   ```bash
+   python -m src.scrapers.seedrs_scraper
+   python -m src.scrapers.fca_scraper
 
 ### Trust Score Analysis
-from src.scoring.trust_scorer import TrustScorer
-from src.auditors.data_quality import DataQualityChecker
+   ```bash
+   from src.scoring.trust_scorer import TrustScorer
+   from src.auditors.data_quality import DataQualityChecker
 
 #Initialize scoring system
-scorer = TrustScorer()
-quality_checker = DataQualityChecker()
+   ```bash
+   scorer = TrustScorer()
+   quality_checker = DataQualityChecker()
 
 #Calculate trust scores
-trust_scores = scorer.calculate_trust_scores(data_sources)
+   ```bash
+   trust_scores = scorer.calculate_trust_scores(data_sources)
 
 ### Dashboard Customization
 The Streamlit dashboard supports various customization options:
-
-Filters: Score thresholds, grade ranges, source types
-Visualizations: Charts, heatmaps, detailed breakdowns
-Export: CSV downloads, summary reports
-Real-time Updates: Automatic data refresh
+1. Filters: Score thresholds, grade ranges, source types
+2. Visualizations: Charts, heatmaps, detailed breakdowns
+3. Export: CSV downloads, summary reports
+4. Real-time Updates: Automatic data refresh
