@@ -1,0 +1,63 @@
+{
+  "source": "fca",
+  "calculated_at": "2025-08-02T00:13:40.928854",
+  "overall_trust_score": 0.111,
+  "trust_grade": "F",
+  "dimension_scores": {
+    "data_completeness": 0,
+    "metadata_quality": 0.0,
+    "regulatory_compliance": 0.2,
+    "transparency": 0,
+    "accessibility": 0.41
+  },
+  "dimension_weights": {
+    "data_completeness": 0.25,
+    "metadata_quality": 0.2,
+    "regulatory_compliance": 0.25,
+    "transparency": 0.15,
+    "accessibility": 0.15
+  },
+  "scoring_details": {
+    "data_completeness_details": {
+      "overall_completeness": 0,
+      "missing_cells": 0,
+      "field_level_variation": 0.0
+    },
+    "metadata_quality_details": {
+      "metadata_completeness": 0,
+      "error_tracking": false,
+      "count_accuracy": 0
+    },
+    "regulatory_compliance_details": {
+      "regulatory_mentions": 0,
+      "privacy_indicators": 0,
+      "compliance_score": 0.0
+    },
+    "transparency_details": {
+      "timeliness_score": 0,
+      "age_days": 999,
+      "update_indicators": 0.3
+    },
+    "accessibility_details": {
+      "api_quality": 0.5,
+      "data_format_quality": 0.0,
+      "ease_of_access": 0.7
+    }
+  },
+  "recommendations": [
+    "Improve data collection processes to reduce missing values",
+    "Enhance metadata documentation and error tracking",
+    "Increase regulatory compliance indicators and documentation",
+    "Provide more frequent updates and better communication",
+    "Improve data format consistency and access methods",
+    "Consider comprehensive data governance review"
+  ],
+  "confidence_level": 0.533,
+  "score_components": {
+    "data_completeness": 0.0,
+    "metadata_quality": 0.0,
+    "regulatory_compliance": 0.05,
+    "transparency": 0.0,
+    "accessibility": 0.061
+  }
+}

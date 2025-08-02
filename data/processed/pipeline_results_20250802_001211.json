@@ -1,0 +1,238 @@
+{
+  "execution_timestamp": "2025-08-02T00:12:07.278197",
+  "scraped_sources": {
+    "seedrs": {
+      "status": "success",
+      "records_count": 0,
+      "data_file": "/Users/ishaingersol/london-fintech-trust-index/data/raw/seedrs_20250802_001207.json",
+      "scraper_summary": {
+        "source": "seedrs",
+        "total_records": 0,
+        "scraping_errors": 1,
+        "last_scraped": "2025-08-02T00:12:07.278791",
+        "data_quality_score": 0.0
+      },
+      "scraped_at": "2025-08-02T00:12:07.704231"
+    },
+    "fca": {
+      "status": "success",
+      "records_count": 0,
+      "data_file": "/Users/ishaingersol/london-fintech-trust-index/data/raw/fca_20250802_001211.json",
+      "scraper_summary": {
+        "source": "fca",
+        "total_records": 0,
+        "scraping_errors": 5,
+        "last_scraped": "2025-08-02T00:12:07.279008",
+        "data_quality_score": 0.0
+      },
+      "scraped_at": "2025-08-02T00:12:11.876845"
+    }
+  },
+  "audit_results": {
+    "seedrs": {
+      "status": "success",
+      "audit_result": {
+        "source": "seedrs",
+        "audit_timestamp": "2025-08-02T00:12:11.878257",
+        "total_records": 0,
+        "total_fields": 0,
+        "error": "Unable to load or process dataset",
+        "overall_quality_score": 0
+      },
+      "audited_at": "2025-08-02T00:12:11.878266"
+    },
+    "fca": {
+      "status": "success",
+      "audit_result": {
+        "source": "fca",
+        "audit_timestamp": "2025-08-02T00:12:11.878605",
+        "total_records": 0,
+        "total_fields": 0,
+        "error": "Unable to load or process dataset",
+        "overall_quality_score": 0
+      },
+      "audited_at": "2025-08-02T00:12:11.878611"
+    }
+  },
+  "trust_scores": {
+    "seedrs": {
+      "status": "success",
+      "trust_score": {
+        "source": "seedrs",
+        "calculated_at": "2025-08-02T00:12:11.879486",
+        "overall_trust_score": 0.058,
+        "trust_grade": "F",
+        "dimension_scores": {
+          "data_completeness": 0,
+          "metadata_quality": 0.0,
+          "regulatory_compliance": 0.0,
+          "transparency": 0.04,
+          "accessibility": 0.35
+        },
+        "dimension_weights": {
+          "data_completeness": 0.25,
+          "metadata_quality": 0.2,
+          "regulatory_compliance": 0.25,
+          "transparency": 0.15,
+          "accessibility": 0.15
+        },
+        "scoring_details": {
+          "data_completeness_details": {
+            "overall_completeness": 0,
+            "missing_cells": 0,
+            "field_level_variation": 0.0
+          },
+          "metadata_quality_details": {
+            "metadata_completeness": 0,
+            "error_tracking": false,
+            "count_accuracy": 0
+          },
+          "regulatory_compliance_details": {
+            "regulatory_mentions": 0,
+            "privacy_indicators": 0,
+            "compliance_score": 0.0
+          },
+          "transparency_details": {
+            "timeliness_score": 0,
+            "age_days": 999,
+            "update_indicators": 0.3
+          },
+          "accessibility_details": {
+            "api_quality": 0.5,
+            "data_format_quality": 0.0,
+            "ease_of_access": 0.5
+          }
+        },
+        "recommendations": [
+          "Improve data collection processes to reduce missing values",
+          "Enhance metadata documentation and error tracking",
+          "Increase regulatory compliance indicators and documentation",
+          "Provide more frequent updates and better communication",
+          "Improve data format consistency and access methods",
+          "Consider comprehensive data governance review"
+        ],
+        "confidence_level": 0.6,
+        "score_components": {
+          "data_completeness": 0.0,
+          "metadata_quality": 0.0,
+          "regulatory_compliance": 0.0,
+          "transparency": 0.006,
+          "accessibility": 0.052
+        }
+      },
+      "calculated_at": "2025-08-02T00:12:11.880003"
+    },
+    "fca": {
+      "status": "success",
+      "trust_score": {
+        "source": "fca",
+        "calculated_at": "2025-08-02T00:12:11.880528",
+        "overall_trust_score": 0.111,
+        "trust_grade": "F",
+        "dimension_scores": {
+          "data_completeness": 0,
+          "metadata_quality": 0.0,
+          "regulatory_compliance": 0.2,
+          "transparency": 0,
+          "accessibility": 0.41
+        },
+        "dimension_weights": {
+          "data_completeness": 0.25,
+          "metadata_quality": 0.2,
+          "regulatory_compliance": 0.25,
+          "transparency": 0.15,
+          "accessibility": 0.15
+        },
+        "scoring_details": {
+          "data_completeness_details": {
+            "overall_completeness": 0,
+            "missing_cells": 0,
+            "field_level_variation": 0.0
+          },
+          "metadata_quality_details": {
+            "metadata_completeness": 0,
+            "error_tracking": false,
+            "count_accuracy": 0
+          },
+          "regulatory_compliance_details": {
+            "regulatory_mentions": 0,
+            "privacy_indicators": 0,
+            "compliance_score": 0.0
+          },
+          "transparency_details": {
+            "timeliness_score": 0,
+            "age_days": 999,
+            "update_indicators": 0.3
+          },
+          "accessibility_details": {
+            "api_quality": 0.5,
+            "data_format_quality": 0.0,
+            "ease_of_access": 0.7
+          }
+        },
+        "recommendations": [
+          "Improve data collection processes to reduce missing values",
+          "Enhance metadata documentation and error tracking",
+          "Increase regulatory compliance indicators and documentation",
+          "Provide more frequent updates and better communication",
+          "Improve data format consistency and access methods",
+          "Consider comprehensive data governance review"
+        ],
+        "confidence_level": 0.533,
+        "score_components": {
+          "data_completeness": 0.0,
+          "metadata_quality": 0.0,
+          "regulatory_compliance": 0.05,
+          "transparency": 0.0,
+          "accessibility": 0.061
+        }
+      },
+      "calculated_at": "2025-08-02T00:12:11.881449"
+    }
+  },
+  "summary": {
+    "pipeline_execution": {
+      "started_at": "2025-08-02T00:12:07.278197",
+      "completed_at": "2025-08-02T00:12:11.881849",
+      "total_errors": 0,
+      "status": "completed_successfully"
+    },
+    "data_collection": {
+      "sources_attempted": 2,
+      "sources_successful": 2,
+      "sources_failed": 0,
+      "total_records_collected": 0
+    },
+    "quality_auditing": {
+      "sources_audited": 2,
+      "audits_failed": 0
+    },
+    "trust_scoring": {
+      "sources_scored": 2,
+      "scoring_failed": 0,
+      "average_trust_score": 0.0845,
+      "highest_trust_score": 0.111,
+      "lowest_trust_score": 0.058
+    },
+    "source_rankings": [
+      {
+        "source": "fca",
+        "trust_score": 0.111,
+        "trust_grade": "F",
+        "confidence_level": 0.533,
+        "records_count": 0
+      },
+      {
+        "source": "seedrs",
+        "trust_score": 0.058,
+        "trust_grade": "F",
+        "confidence_level": 0.6,
+        "records_count": 0
+      }
+    ],
+    "recommendations": [
+      "Overall data quality is below acceptable threshold - comprehensive review needed"
+    ]
+  },
+  "errors": []
+}

@@ -1,0 +1,156 @@
+2025-08-02 00:12:07,278 - main_pipeline - INFO - Fintech Trust Index Pipeline initialized
+2025-08-02 00:12:07,278 - main_pipeline - INFO - Starting full pipeline execution
+2025-08-02 00:12:07,278 - main_pipeline - INFO - ==================================================
+2025-08-02 00:12:07,278 - main_pipeline - INFO - STEP 1: DATA COLLECTION
+2025-08-02 00:12:07,278 - main_pipeline - INFO - ==================================================
+2025-08-02 00:12:07,278 - main_pipeline - INFO - Starting data collection phase
+2025-08-02 00:12:07,278 - main_pipeline - INFO - Initializing scraper for: seedrs
+2025-08-02 00:12:07,278 - main_pipeline - INFO - Initializing scraper for: fca
+2025-08-02 00:12:07,279 - main_pipeline - INFO - Initializing scraper for: open_banking
+2025-08-02 00:12:07,279 - main_pipeline - WARNING - No scraper implemented for: open_banking
+2025-08-02 00:12:07,279 - main_pipeline - INFO - Scraping data from: seedrs
+2025-08-02 00:12:07,279 - scraper.seedrs - INFO - Starting Seedrs campaign scraping...
+2025-08-02 00:12:07,279 - scraper.seedrs - INFO - Making GET request to: https://www.seedrs.com/discover/campaigns
+2025-08-02 00:12:07,703 - scraper.seedrs - ERROR - Request failed for https://www.seedrs.com/discover/campaigns: 403 Client Error: Forbidden for url: https://europe.republic.com:443/discover/campaigns
+2025-08-02 00:12:07,704 - scraper.seedrs - INFO - Data saved to: /Users/ishaingersol/london-fintech-trust-index/data/raw/seedrs_20250802_001207.json
+2025-08-02 00:12:07,704 - scraper.seedrs - INFO - Total records scraped: 0
+2025-08-02 00:12:07,704 - main_pipeline - INFO - Successfully scraped 0 records from seedrs
+2025-08-02 00:12:07,704 - main_pipeline - INFO - Scraping data from: fca
+2025-08-02 00:12:07,704 - scraper.fca - INFO - Starting FCA register scraping...
+2025-08-02 00:12:07,704 - scraper.fca - INFO - Searching FCA register for: payment
+2025-08-02 00:12:07,704 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:12:07,952 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=payment&status=Authorised
+2025-08-02 00:12:07,952 - scraper.fca - INFO - Searching FCA register for: electronic money
+2025-08-02 00:12:08,704 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:12:08,896 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=electronic+money&status=Authorised
+2025-08-02 00:12:08,897 - scraper.fca - INFO - Searching FCA register for: fintech
+2025-08-02 00:12:09,709 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:12:09,879 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=fintech&status=Authorised
+2025-08-02 00:12:09,880 - scraper.fca - INFO - Searching FCA register for: digital
+2025-08-02 00:12:10,712 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:12:10,846 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=digital&status=Authorised
+2025-08-02 00:12:10,847 - scraper.fca - INFO - Searching FCA register for: peer-to-peer
+2025-08-02 00:12:11,716 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:12:11,875 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=peer-to-peer&status=Authorised
+2025-08-02 00:12:11,875 - scraper.fca - INFO - Removed 0 duplicates
+2025-08-02 00:12:11,876 - scraper.fca - INFO - Data saved to: /Users/ishaingersol/london-fintech-trust-index/data/raw/fca_20250802_001211.json
+2025-08-02 00:12:11,876 - scraper.fca - INFO - Total records scraped: 0
+2025-08-02 00:12:11,876 - main_pipeline - INFO - Successfully scraped 0 records from fca
+2025-08-02 00:12:11,876 - main_pipeline - INFO - ==================================================
+2025-08-02 00:12:11,877 - main_pipeline - INFO - STEP 2: DATA QUALITY AUDITING
+2025-08-02 00:12:11,877 - main_pipeline - INFO - ==================================================
+2025-08-02 00:12:11,877 - main_pipeline - INFO - Starting data quality auditing phase
+2025-08-02 00:12:11,877 - main_pipeline - INFO - Auditing data quality for: seedrs
+2025-08-02 00:12:11,878 - data_quality_auditor - INFO - Starting data quality audit for seedrs
+2025-08-02 00:12:11,878 - main_pipeline - INFO - Quality audit completed for seedrs
+2025-08-02 00:12:11,878 - main_pipeline - INFO - Overall quality score: 0
+2025-08-02 00:12:11,878 - main_pipeline - INFO - Auditing data quality for: fca
+2025-08-02 00:12:11,878 - data_quality_auditor - INFO - Starting data quality audit for fca
+2025-08-02 00:12:11,878 - main_pipeline - INFO - Quality audit completed for fca
+2025-08-02 00:12:11,878 - main_pipeline - INFO - Overall quality score: 0
+2025-08-02 00:12:11,878 - main_pipeline - INFO - ==================================================
+2025-08-02 00:12:11,878 - main_pipeline - INFO - STEP 3: TRUST SCORE CALCULATION
+2025-08-02 00:12:11,879 - main_pipeline - INFO - ==================================================
+2025-08-02 00:12:11,879 - main_pipeline - INFO - Starting trust score calculation phase
+2025-08-02 00:12:11,879 - main_pipeline - INFO - Calculating trust score for: seedrs
+2025-08-02 00:12:11,879 - trust_scorer - INFO - Calculating trust score for seedrs
+2025-08-02 00:12:11,879 - trust_scorer - INFO - Trust score report saved: /Users/ishaingersol/london-fintech-trust-index/data/processed/trust_score_seedrs_20250802_001211.json
+2025-08-02 00:12:11,880 - main_pipeline - INFO - Trust score calculated for seedrs
+2025-08-02 00:12:11,880 - main_pipeline - INFO - Overall trust score: 0.058 (F)
+2025-08-02 00:12:11,880 - main_pipeline - INFO - Calculating trust score for: fca
+2025-08-02 00:12:11,880 - trust_scorer - INFO - Calculating trust score for fca
+2025-08-02 00:12:11,880 - trust_scorer - INFO - Trust score report saved: /Users/ishaingersol/london-fintech-trust-index/data/processed/trust_score_fca_20250802_001211.json
+2025-08-02 00:12:11,881 - main_pipeline - INFO - Trust score calculated for fca
+2025-08-02 00:12:11,881 - main_pipeline - INFO - Overall trust score: 0.111 (F)
+2025-08-02 00:12:11,881 - main_pipeline - INFO - ==================================================
+2025-08-02 00:12:11,881 - main_pipeline - INFO - STEP 4: GENERATE SUMMARY
+2025-08-02 00:12:11,881 - main_pipeline - INFO - ==================================================
+2025-08-02 00:12:11,881 - main_pipeline - INFO - Generating pipeline summary
+2025-08-02 00:12:11,881 - main_pipeline - INFO - Pipeline Summary:
+2025-08-02 00:12:11,881 - main_pipeline - INFO -   Total sources processed: 2
+2025-08-02 00:12:11,882 - main_pipeline - INFO -   Successful data collection: 2
+2025-08-02 00:12:11,882 - main_pipeline - INFO -   Total records collected: 0
+2025-08-02 00:12:11,882 - main_pipeline - INFO -   Quality audits completed: 2
+2025-08-02 00:12:11,882 - main_pipeline - INFO -   Trust scores calculated: 2
+2025-08-02 00:12:11,882 - main_pipeline - INFO -   Average trust score: 0.085
+2025-08-02 00:12:11,882 - main_pipeline - INFO -   Total errors: 0
+2025-08-02 00:12:11,883 - main_pipeline - INFO - Pipeline results saved to: /Users/ishaingersol/london-fintech-trust-index/data/processed/pipeline_results_20250802_001211.json
+2025-08-02 00:12:11,883 - main_pipeline - INFO - Pipeline execution completed successfully
+2025-08-02 00:13:36,466 - main_pipeline - INFO - Fintech Trust Index Pipeline initialized
+2025-08-02 00:13:36,467 - main_pipeline - INFO - Starting full pipeline execution
+2025-08-02 00:13:36,467 - main_pipeline - INFO - ==================================================
+2025-08-02 00:13:36,467 - main_pipeline - INFO - STEP 1: DATA COLLECTION
+2025-08-02 00:13:36,467 - main_pipeline - INFO - ==================================================
+2025-08-02 00:13:36,467 - main_pipeline - INFO - Starting data collection phase
+2025-08-02 00:13:36,467 - main_pipeline - INFO - Initializing scraper for: seedrs
+2025-08-02 00:13:36,467 - main_pipeline - INFO - Initializing scraper for: fca
+2025-08-02 00:13:36,468 - main_pipeline - INFO - Initializing scraper for: open_banking
+2025-08-02 00:13:36,468 - main_pipeline - WARNING - No scraper implemented for: open_banking
+2025-08-02 00:13:36,468 - main_pipeline - INFO - Scraping data from: seedrs
+2025-08-02 00:13:36,468 - scraper.seedrs - INFO - Starting Seedrs campaign scraping...
+2025-08-02 00:13:36,468 - scraper.seedrs - INFO - Making GET request to: https://www.seedrs.com/discover/campaigns
+2025-08-02 00:13:36,786 - scraper.seedrs - ERROR - Request failed for https://www.seedrs.com/discover/campaigns: 403 Client Error: Forbidden for url: https://europe.republic.com:443/discover/campaigns
+2025-08-02 00:13:36,787 - scraper.seedrs - INFO - Data saved to: /Users/ishaingersol/london-fintech-trust-index/data/raw/seedrs_20250802_001336.json
+2025-08-02 00:13:36,787 - scraper.seedrs - INFO - Total records scraped: 0
+2025-08-02 00:13:36,787 - main_pipeline - INFO - Successfully scraped 0 records from seedrs
+2025-08-02 00:13:36,787 - main_pipeline - INFO - Scraping data from: fca
+2025-08-02 00:13:36,787 - scraper.fca - INFO - Starting FCA register scraping...
+2025-08-02 00:13:36,787 - scraper.fca - INFO - Searching FCA register for: payment
+2025-08-02 00:13:36,787 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:13:36,913 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=payment&status=Authorised
+2025-08-02 00:13:36,913 - scraper.fca - INFO - Searching FCA register for: electronic money
+2025-08-02 00:13:37,789 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:13:37,945 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=electronic+money&status=Authorised
+2025-08-02 00:13:37,946 - scraper.fca - INFO - Searching FCA register for: fintech
+2025-08-02 00:13:38,790 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:13:38,927 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=fintech&status=Authorised
+2025-08-02 00:13:38,928 - scraper.fca - INFO - Searching FCA register for: digital
+2025-08-02 00:13:39,795 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:13:39,950 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=digital&status=Authorised
+2025-08-02 00:13:39,950 - scraper.fca - INFO - Searching FCA register for: peer-to-peer
+2025-08-02 00:13:40,799 - scraper.fca - INFO - Making GET request to: https://register.fca.org.uk/search
+2025-08-02 00:13:40,925 - scraper.fca - ERROR - Request failed for https://register.fca.org.uk/search: 404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=peer-to-peer&status=Authorised
+2025-08-02 00:13:40,925 - scraper.fca - INFO - Removed 0 duplicates
+2025-08-02 00:13:40,926 - scraper.fca - INFO - Data saved to: /Users/ishaingersol/london-fintech-trust-index/data/raw/fca_20250802_001340.json
+2025-08-02 00:13:40,926 - scraper.fca - INFO - Total records scraped: 0
+2025-08-02 00:13:40,926 - main_pipeline - INFO - Successfully scraped 0 records from fca
+2025-08-02 00:13:40,926 - main_pipeline - INFO - ==================================================
+2025-08-02 00:13:40,926 - main_pipeline - INFO - STEP 2: DATA QUALITY AUDITING
+2025-08-02 00:13:40,926 - main_pipeline - INFO - ==================================================
+2025-08-02 00:13:40,926 - main_pipeline - INFO - Starting data quality auditing phase
+2025-08-02 00:13:40,926 - main_pipeline - INFO - Auditing data quality for: seedrs
+2025-08-02 00:13:40,926 - data_quality_auditor - INFO - Starting data quality audit for seedrs
+2025-08-02 00:13:40,926 - main_pipeline - INFO - Quality audit completed for seedrs
+2025-08-02 00:13:40,926 - main_pipeline - INFO - Overall quality score: 0
+2025-08-02 00:13:40,926 - main_pipeline - INFO - Auditing data quality for: fca
+2025-08-02 00:13:40,927 - data_quality_auditor - INFO - Starting data quality audit for fca
+2025-08-02 00:13:40,927 - main_pipeline - INFO - Quality audit completed for fca
+2025-08-02 00:13:40,927 - main_pipeline - INFO - Overall quality score: 0
+2025-08-02 00:13:40,927 - main_pipeline - INFO - ==================================================
+2025-08-02 00:13:40,927 - main_pipeline - INFO - STEP 3: TRUST SCORE CALCULATION
+2025-08-02 00:13:40,927 - main_pipeline - INFO - ==================================================
+2025-08-02 00:13:40,927 - main_pipeline - INFO - Starting trust score calculation phase
+2025-08-02 00:13:40,927 - main_pipeline - INFO - Calculating trust score for: seedrs
+2025-08-02 00:13:40,927 - trust_scorer - INFO - Calculating trust score for seedrs
+2025-08-02 00:13:40,928 - trust_scorer - INFO - Trust score report saved: /Users/ishaingersol/london-fintech-trust-index/data/processed/trust_score_seedrs_20250802_001340.json
+2025-08-02 00:13:40,928 - main_pipeline - INFO - Trust score calculated for seedrs
+2025-08-02 00:13:40,928 - main_pipeline - INFO - Overall trust score: 0.058 (F)
+2025-08-02 00:13:40,928 - main_pipeline - INFO - Calculating trust score for: fca
+2025-08-02 00:13:40,928 - trust_scorer - INFO - Calculating trust score for fca
+2025-08-02 00:13:40,929 - trust_scorer - INFO - Trust score report saved: /Users/ishaingersol/london-fintech-trust-index/data/processed/trust_score_fca_20250802_001340.json
+2025-08-02 00:13:40,929 - main_pipeline - INFO - Trust score calculated for fca
+2025-08-02 00:13:40,929 - main_pipeline - INFO - Overall trust score: 0.111 (F)
+2025-08-02 00:13:40,929 - main_pipeline - INFO - ==================================================
+2025-08-02 00:13:40,929 - main_pipeline - INFO - STEP 4: GENERATE SUMMARY
+2025-08-02 00:13:40,929 - main_pipeline - INFO - ==================================================
+2025-08-02 00:13:40,929 - main_pipeline - INFO - Generating pipeline summary
+2025-08-02 00:13:40,930 - main_pipeline - INFO - Pipeline Summary:
+2025-08-02 00:13:40,930 - main_pipeline - INFO -   Total sources processed: 2
+2025-08-02 00:13:40,930 - main_pipeline - INFO -   Successful data collection: 2
+2025-08-02 00:13:40,930 - main_pipeline - INFO -   Total records collected: 0
+2025-08-02 00:13:40,930 - main_pipeline - INFO -   Quality audits completed: 2
+2025-08-02 00:13:40,930 - main_pipeline - INFO -   Trust scores calculated: 2
+2025-08-02 00:13:40,930 - main_pipeline - INFO -   Average trust score: 0.085
+2025-08-02 00:13:40,930 - main_pipeline - INFO -   Total errors: 0
+2025-08-02 00:13:40,931 - main_pipeline - INFO - Pipeline results saved to: /Users/ishaingersol/london-fintech-trust-index/data/processed/pipeline_results_20250802_001340.json
+2025-08-02 00:13:40,931 - main_pipeline - INFO - Pipeline execution completed successfully

@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "source": "fca",
+    "scraped_at": "2025-08-02T00:12:07.279008",
+    "total_records": 0,
+    "errors": [
+      {
+        "url": "https://register.fca.org.uk/search",
+        "error": "404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=payment&status=Authorised",
+        "timestamp": "2025-08-02T00:12:07.952277"
+      },
+      {
+        "url": "https://register.fca.org.uk/search",
+        "error": "404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=electronic+money&status=Authorised",
+        "timestamp": "2025-08-02T00:12:08.897115"
+      },
+      {
+        "url": "https://register.fca.org.uk/search",
+        "error": "404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=fintech&status=Authorised",
+        "timestamp": "2025-08-02T00:12:09.880327"
+      },
+      {
+        "url": "https://register.fca.org.uk/search",
+        "error": "404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=digital&status=Authorised",
+        "timestamp": "2025-08-02T00:12:10.846950"
+      },
+      {
+        "url": "https://register.fca.org.uk/search",
+        "error": "404 Client Error: Not Found for url: https://register.fca.org.uk/search?name=peer-to-peer&status=Authorised",
+        "timestamp": "2025-08-02T00:12:11.875497"
+      }
+    ],
+    "saved_at": "2025-08-02T00:12:11.875744"
+  },
+  "data": []
+}

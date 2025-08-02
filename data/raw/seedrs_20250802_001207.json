@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "source": "seedrs",
+    "scraped_at": "2025-08-02T00:12:07.278791",
+    "total_records": 0,
+    "errors": [
+      {
+        "url": "https://www.seedrs.com/discover/campaigns",
+        "error": "403 Client Error: Forbidden for url: https://europe.republic.com:443/discover/campaigns",
+        "timestamp": "2025-08-02T00:12:07.703425"
+      }
+    ],
+    "saved_at": "2025-08-02T00:12:07.703499"
+  },
+  "data": []
+}

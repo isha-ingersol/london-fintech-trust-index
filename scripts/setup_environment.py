@@ -116,7 +116,7 @@ def main():
     
     print("\n✅ Setup complete!")
     print("\nNext steps:")
-    print("1. Run: python src/main_pipeline.py")
+    print("1. Run: python3 src/main_pipeline.py")
     print("2. Launch: streamlit run streamlit_app.py")
     print("3. Deploy to Streamlit Cloud")
 

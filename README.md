@@ -55,7 +55,7 @@ Access the live dashboard: [London Fintech Trust Index](https://your-app-url.str
 
 2. **Set up virtual environment**
     ```bash
-    python -m venv venv
+    python3 -m venv venv
 
     # Windows
     venv\Scripts\activate
@@ -69,11 +69,11 @@ Access the live dashboard: [London Fintech Trust Index](https://your-app-url.str
 
 4. **Run setup script**
     ```bash
-    python scripts/setup_environment.py
+    python3 scripts/setup_environment.py
 
 5. **Initialize data collection**
     ```bash
-    python src/main_pipeline.py
+    python3 src/main_pipeline.py
 
 6. **Launch dashboard**
     ```bash
@@ -86,27 +86,22 @@ Access the live dashboard: [London Fintech Trust Index](https://your-app-url.str
 ### Data Collection
 The system automatically collects data from configured sources:
 
-#Run complete data pipeline
-   ```bash
-   python src/main_pipeline.py
+Run complete data pipeline
+   python3 src/main_pipeline.py
 
-#Run specific scrapers
-   ```bash
-   python -m src.scrapers.seedrs_scraper
-   python -m src.scrapers.fca_scraper
+Run specific scrapers
+   python3 -m src.scrapers.seedrs_scraper
+   python3 -m src.scrapers.fca_scraper
 
 ### Trust Score Analysis
-   ```bash
    from src.scoring.trust_scorer import TrustScorer
    from src.auditors.data_quality import DataQualityChecker
 
 #Initialize scoring system
-   ```bash
    scorer = TrustScorer()
    quality_checker = DataQualityChecker()
 
 #Calculate trust scores
-   ```bash
    trust_scores = scorer.calculate_trust_scores(data_sources)
 
 ### Dashboard Customization
